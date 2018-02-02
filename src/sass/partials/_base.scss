@@ -1,0 +1,348 @@
+
+// ----------------------------------------------------------------------------
+// -----------------------------GENERAL STYLING--------------------------------
+// ----------------------------------------------------------------------------
+
+html {
+    font-size: 16px;
+}
+
+@font-face {
+    font-family: 'baron_neueregular';
+    src: url('fonts/baron_neue/baron_neue-webfont.woff2') format('woff2'),
+         url('fonts/baron_neue/baron_neue-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+
+}
+
+body {
+    background-image: url('images/bg_1600_15.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'baron_neueregular';
+}
+
+.break {
+    margin: 1rem 0 1rem 0;
+}
+
+
+
+.links {
+    color: #972b2b;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+
+
+// ----------------------------------------------------------------------------
+// -----------------------------MAIN LOGO STYLING--------------------------------
+// ----------------------------------------------------------------------------
+
+
+.logoPic {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    width: 20rem;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    @media (max-width: 576px){
+        width: 15rem;
+    }
+}
+
+// ----------------------------------------------------------------------------
+// -----------------------------NAVIGATION STYLING--------------------------------
+// ----------------------------------------------------------------------------
+
+
+
+.mainNav{
+    background-color: black;
+    box-shadow: 0 0 30px;
+    a {
+        text-decoration: none;
+    li{
+        color: white;
+        text-transform: uppercase;
+        list-style: none;
+        font-size: 1.4rem;
+        @media (max-width: 780px){
+            font-size: 1.2rem
+        }
+        @media (max-width: 720px){
+            font-size: 1rem            
+        }
+        @media (max-width: 670px){
+            font-size: 0.9rem            
+        }
+        @media (max-width: 620px){
+            font-size: 0.7rem            
+        }
+
+
+    }}
+}
+
+.hamCont {
+    cursor: pointer;     
+}
+
+
+.hamIcon {
+    height: 5px;
+    width: 50px;
+    border-radius: 5px;
+    position: relative;
+    margin-bottom: 1rem;
+    background-color: #d2d2d2;
+}
+
+.hItem1, .hItem2 {
+    margin-bottom: 0.4rem;
+}
+
+
+.smallMenu {
+    text-align: center;
+    color: #d2d2d2;
+    z-index: 3000;
+    list-style: none;
+    font-size: 2rem;
+    padding-left: 0;
+    a{
+        text-decoration: none;
+        color: #d2d2d2;        
+    }
+}
+
+// ----------------------------------------------------------------------------
+// -----------------------------MAIN VIDEO STYLING--------------------------------
+// ----------------------------------------------------------------------------
+
+.videoSection {
+    background-color: rgba(0, 0, 0, 0.322);
+    height: 30rem;
+    iframe{
+        width: 60rem;
+        height: 100%;
+    }
+}
+
+
+// ----------------------------------------------------------------------------
+// -----------------------------GIGS & MAP API STYLING--------------------------------
+// ----------------------------------------------------------------------------
+
+.gigMapSection{
+    @media (max-width: 750px){
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.map{
+    height: 300px;
+    width: 500px;
+    @media(max-width: 520px){
+        width: 400px;
+    }
+    @media(max-width: 420px){
+        width: 300px;
+    }
+}
+
+.otherVenuesContainer{
+    &:hover{
+        background-color: rgba(210, 210, 210, 0.1);
+    }
+}
+
+// ----------------------------------------------------------------------------
+// -----------------------------BAND INFO STYLING--------------------------------
+// ----------------------------------------------------------------------------
+
+
+.bandSection {
+    width: 100%;
+    background-color: black;
+    color: #d2d2d2;
+    font-size: 1.2rem;
+    .bandTextCont{
+        width: 100%;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        font-size: 0.9rem;
+        @media(max-width: 770px){
+            text-align: center;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 0.7rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+    img {
+        @media(max-width: 770px){
+            display: none
+        }
+    }
+}
+
+// ----------------------------------------------------------------------------
+// -----------------------------ALBUMS STYLING--------------------------------
+// ----------------------------------------------------------------------------
+.albumHeaderCont{
+    @media(max-width: 770px){
+        display: flex;
+        justify-content: center;
+    }
+    .albumsHeader{
+        color: #d2d2d2;
+        display: inline-block;
+        }
+}
+.singleAlbum{
+    background-color: black;
+    margin: 0.2rem;
+    
+    h3{
+        text-align: center;
+        color: #d2d2d2;
+        font-size: 0.8rem;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+// ----------------------------------------------------------------------------
+// -----------------------------CONTACT STYLING--------------------------------
+// ----------------------------------------------------------------------------
+
+
+.contactSection {
+    background-color: black;
+    color: #d2d2d2;
+    img{
+        max-width: 100%;
+        width: auto;
+        @media(max-width: 570px){
+            display: none;
+        }
+    }
+    .contactinfo {
+        margin: 0 1rem 0 1rem;
+        font-size: 1.2rem;
+        @media(max-width: 830px){
+            font-size: 1rem;
+        }
+        @media(max-width: 700px){
+            font-size: 0.9rem;
+        }
+        @media(max-width: 576px){
+            text-align: center
+        }
+    }
+}
+
+
+
+// ----------------------------------------------------------------------------
+// -----------------------------POST STYLING--------------------------------
+// ----------------------------------------------------------------------------
+
+
+
+
+.postContainer{
+    border: 1px solid rgba(210, 210, 210, 0.2);
+    margin-bottom: 1rem;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    .post {
+        color: rgb(210, 210, 210);
+        text-align: center;
+        font-size: 1rem;
+        margin-right: 1rem;
+        width: 700px;
+        @media (max-width: 720px){
+            width: 500px;
+        }
+        @media (max-width: 520px){
+            width: 400px;
+        }
+        @media (max-width: 420px){
+            font-size: 0.8rem;
+            width: 300px;
+        }
+    }
+    img {
+        width: 500px;
+        height: auto;
+        margin-bottom: 1rem;
+        border: 1px solid #d2d2d233;
+        @media (max-width: 520px){
+            width: 400px
+        }
+        @media (max-width: 420px){
+            width: 300px
+        }
+    }
+}
+
+.YtVideo {
+    width: 500px;
+    height: 281.25px;
+    @media (max-width: 520px){
+        width: 400px
+    }
+    @media (max-width: 420px){
+        width: 300px
+    }
+}
+
+
+
+
+// ----------------------------------------------------------------------------
+// -----------------------------EVENTs STYLING--------------------------------
+// ----------------------------------------------------------------------------
+
+.event {
+    color: rgb(210, 210, 210);
+}
+
+.dateWhole{
+    p {
+        margin-left: 0.6rem;
+    }
+}
+
+.redish{
+    color: #972b2b;
+}
+
+// ----------------------------------------------------------------------------
+// -----------------------------MEDIA QUERIES--------------------------------
+// ----------------------------------------------------------------------------
+@media (max-width: 576px){
+    .mainNav{
+    display: none;
+}}
+
+@media (min-width: 577px){
+    .hamCont{
+    display: none;
+    }
+}
+
+
