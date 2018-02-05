@@ -3,6 +3,18 @@ import Container from './Container.jsx';
 
 class Header extends Component {
 
+    handleClick(e) {
+        e.preventDefault();
+        const elementOffsetTop = document.getElementById('test').offsetTop;
+        window.scrollTo(0, elementOffsetTop);
+        console.log(elementOffsetTop);
+    }
+
+    handleUp(e) {
+        e.preventDefault();
+        window.scrollTo(0, 0);
+    }
+
     render() {
         const menuItems = [
             'O nas',
@@ -13,8 +25,23 @@ class Header extends Component {
             'Kontakt'];
 
         const items = menuItems.map(item => {
+            const styles = {
+                linkStyle: {
+                    textDecoration: 'none',
+                    color: 'white'
+                },
+                textStyle: {
+                    marginLeft: '1rem',
+                    textTransform: 'uppercase'
+                }
+            };
+
+            const { linkStyle, textStyle } = styles;
+
             return (
-                <p style={{ marginLeft: '1rem', textTransform: 'uppercase' }}> {item} </p>
+                <a onClick={e => this.handleClick(e)} href="test" style={linkStyle}>
+                    <p style={textStyle}> {item} </p>
+                </a>
             );
         });
 
@@ -24,7 +51,8 @@ class Header extends Component {
                 position: 'fixed',
                 top: 0,
                 width: '100%',
-                backgroundColor: 'rgba(34,34,34,0)'
+                backgroundColor: 'rgba(34,34,34,0)',
+                zIndex: 20000,
 
             },
             headerStyle: {
@@ -43,6 +71,7 @@ class Header extends Component {
             },
             logoStyle: {
                 fontSize: '1.3rem',
+                cursor: 'pointer'
             }
 
         };
@@ -58,7 +87,9 @@ class Header extends Component {
                 <header style={headerStyle} ref='header'> 
                     <Container>
                         <div style={navigationStyle}>   
-                            <div style={logoStyle}>{this.props.text}</div>
+                            <a onClick={e => this.handleUp(e)} style={logoStyle}>
+                                <div>{this.props.text}</div>
+                            </a>
                             <div style={navigationItemsStyle}> {items} </div>
                         </div>
                     </Container>

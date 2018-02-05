@@ -4,7 +4,7 @@ class Section extends Component {
     render() {
         const { containerStyle } = styles;
         return (
-            <div style={containerStyle} />
+            <div id="test" style={containerStyle} />
         );
     }
 }

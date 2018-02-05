@@ -7,13 +7,12 @@ class Background extends Component {
         return (
             <div>
                 <Header text="REWIO BIURO RACHUNKOWE" />
-                <div style={overlayStyle}>
                     <div style={containerStyle}>
+                        <div style={overlayStyle} />
                         <div style={imageContainerStyle}>
-                            <h1 style={textStyle}>OTO NAPIS</h1>
+                            <h1 style={textStyle}>TEXT</h1>
                         </div>
                     </div>
-                </div>
             </div>
         );
     }
@@ -21,12 +20,16 @@ class Background extends Component {
 
 const styles = {
     overlayStyle: {
-        backgroundColor: 'rgba(0,0,0,0.5)',
-        backgroundAttachment: 'fixed',
-        zIndex: 1000,
+        background: 'radial-gradient(ellipse at center, rgba(69,72,77,0.55) 0%,rgba(0,0,0,1) 100%)',
+        position: 'absolute',
+        top: '0px',
+        bottom: '0px',
+        left: '0px',
+        right: '0px',
+        opacity: 0.75,
+        zIndex: -1,
     },
     containerStyle: {
-        backgroundColor: 'rgba(0,0,0,0.5)',
         backgroundImage: 'url(../img/01.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -34,6 +37,7 @@ const styles = {
         height: '62rem',
         backgroundAttachment: 'fixed',
         zIndex: 50,
+        position: 'relative'
 
     },
     imageContainerStyle: {
