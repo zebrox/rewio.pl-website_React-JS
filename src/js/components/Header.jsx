@@ -55,7 +55,7 @@ class Header extends Component {
             const { linkStyle, textStyle } = styles;
 
             return (
-                <a onClick={e => this.handleClick(e)} href="test" style={linkStyle}>
+                <a onClick={e => this.handleClick(e)} href="test" key={item} style={linkStyle}>
                     <p style={textStyle}> {item} </p>
                 </a>
             );
