@@ -2,6 +2,22 @@ import React, { Component } from 'react';
 import Container from './Container.jsx';
 
 class Header extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            backgroundColor: 'rgba(34,34,34,0)',
+        };
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', () => this.handleScroll());
+    }
+
+    handleScroll() {
+        const test = (pageYOffset > 900) ? 
+        (this.setState({ backgroundColor: 'black' })) : 
+        (this.setState({ backgroundColor: 'rgba(34,34,34,0)' }));
+    }
 
     handleClick(e) {
         e.preventDefault();
@@ -51,7 +67,7 @@ class Header extends Component {
                 position: 'fixed',
                 top: 0,
                 width: '100%',
-                backgroundColor: 'rgba(34,34,34,0)',
+                backgroundColor: this.state.backgroundColor,
                 zIndex: 20000,
 
             },

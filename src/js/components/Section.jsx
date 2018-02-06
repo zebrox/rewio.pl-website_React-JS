@@ -12,7 +12,10 @@ class Section extends Component {
 const styles = {
     containerStyle: {
         backgroundImage: 'url(../img/03.jpg)',
-        height: '800px',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        height: 370,
         width: '100%',
         backgroundAttachment: 'fixed'
     }

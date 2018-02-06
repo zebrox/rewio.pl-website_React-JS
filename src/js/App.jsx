@@ -5,6 +5,7 @@ import Test from './components/Test.jsx';
 import StartingSection from './components/StartingSection.jsx';
 import Section from './components/Section.jsx';
 import Container from './components/Container.jsx';
+import Form from './components/Form.jsx';
 
 ReallySmoothScroll.shim();
 
@@ -21,13 +22,15 @@ class App extends React.Component {
                     <Test />
                     <Test />
                 </Container>
-                <Section  ref='test' />
+                <Section />
                     <Test />
                     <Test />
                     <Test />
                     <Test />
-                    <Test />
-                    <Test />
+                    <Section />
+                    <Container>
+                        <Form />
+                    </Container>
             </div>
         );
     }
