@@ -77,7 +77,7 @@ class Form extends Component {
                 backgroundColor: this.state.backgroundColor,
                 width: '10rem',
                 height: '2rem',
-                border: '0.5px solid black',
+                border: '0.5px solid grey',
                 borderRadius: '5px',
                 textTransform: 'uppercase',
                 color: this.state.color,

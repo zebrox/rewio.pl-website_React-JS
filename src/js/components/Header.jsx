@@ -21,9 +21,9 @@ class Header extends Component {
 
     handleClick(e) {
         e.preventDefault();
-        const elementOffsetTop = document.getElementById('test').offsetTop;
+        console.log(e.target.innerText)
+        const elementOffsetTop = document.getElementById(e.target.innerText).offsetTop;
         window.scrollTo(0, elementOffsetTop);
-        console.log(elementOffsetTop);
     }
 
     handleUp(e) {
@@ -33,18 +33,20 @@ class Header extends Component {
 
     render() {
         const menuItems = [
-            'O nas',
-            'Księgowość',
-            'Kadre i płace',
-            'Doradztwo',
-            'Nieruchomości',
-            'Kontakt'];
+            { menuItem: 'O nas', link: 'About' },
+            { menuItem: 'Księgowość', link: 'Ksiegowosc' },
+            { menuItem: 'Kadre i płace', link: 'Kadre' },
+            { menuItem: 'Doradztwo', link: 'Doradztwo' },
+            { menuItem: 'Nieruchomości', link: 'nieruchomosci' },
+            { menuItem: 'Kontakt', link: 'kontakt' }
+        ];
 
         const items = menuItems.map(item => {
             const styles = {
                 linkStyle: {
                     textDecoration: 'none',
-                    color: 'white'
+                    color: 'white',
+                    cursor: 'pointer'
                 },
                 textStyle: {
                     marginLeft: '1rem',
@@ -55,8 +57,8 @@ class Header extends Component {
             const { linkStyle, textStyle } = styles;
 
             return (
-                <a onClick={e => this.handleClick(e)} href="test" key={item} style={linkStyle}>
-                    <p style={textStyle}> {item} </p>
+                <a onClick={e => this.handleClick(e)} key={item.link} style={linkStyle}>
+                    <p style={textStyle}> {item.menuItem} </p>
                 </a>
             );
         });
